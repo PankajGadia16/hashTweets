@@ -8,7 +8,7 @@ const client = new Twitter({
 });
 
 
-const responseFunction = (err, results, res, next, ) => {
+const responseFunction = (err, results, res, next) => {
     if (err)
         res.send(err)
     else if (!results)
@@ -20,7 +20,7 @@ const responseFunction = (err, results, res, next, ) => {
 module.exports = {
     loadTweets: (req, res, next) => {
         const params = {
-            q: '#car',
+            q: '#'+req.query.hashString,
             result_type: "recent",
             lang: "en"
         };

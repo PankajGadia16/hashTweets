@@ -1,5 +1,6 @@
 const initialState = {
     tweets: [],
+    hashString: ""
 }
 export default (state = initialState, action) => {
     switch (action.type) {
